@@ -1,22 +1,18 @@
 name: PR Font Build Validation
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
-    name: Build ${{ matrix.fontName }} font
-    if: github.repository == 'be5invis/Iosevka'
+    name: Build Font
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        fontName: ["Iosevka", "IosevkaSlab", "IosevkaAile", "IosevkaEtoile", "IosevkaNoVarTest"]
 
     steps:
       # Checkout repository into `iosevka` sub directory
       - uses: actions/checkout@v4
-        with:
-          path: iosevka
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -29,9 +25,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ttfautohint
 
-      - name: Build Font ${{ matrix.fontName }}
+      - name: Build Font
         shell: bash
-        working-directory: iosevka
         run: |
           npm install
-          npm run build -- ttf::${{ matrix.fontName }}
+          npm run build -- contents::IosevkaRn
+
+      - name: Archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: font
+          path: dist/
