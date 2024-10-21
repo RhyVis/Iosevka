@@ -1,11 +1,11 @@
-[buildPlans.IosevkaRn]
-family = "Iosevka Rn"
+[buildPlans.IosevkaRx]
+family = "Iosevka Rx"
 spacing = "normal"
 serifs = "sans"
 noCvSs = false
 exportGlyphNames = true
 
-[buildPlans.IosevkaRn.variants.design]
+[buildPlans.IosevkaRx.variants.design]
 one = "base"
 two = "curly-neck-serifed"
 three = "flat-top-serifed"
@@ -45,41 +45,65 @@ b = "toothed-motion-serifed"
 c = "unilateral-serifed"
 d = "toothed-serifed"
 e = "flat-crossbar"
-f = "serifed-crossbar-at-x-height"
-g = "double-storey"
+f = "flat-hook-serifed"
+g = "double-storey-open"
 h = "straight-motion-serifed"
 i = "zshaped"
 j = "flat-hook-serifed"
 k = "curly-top-left-and-bottom-right-serifed"
 l = "zshaped"
 m = "serifed"
-n = "straight-motion-serifed"
+n = "tailed-motion-serifed"
 p = "eared-serifed"
 q = "straight-serifed"
 r = "corner-hooked-serifed"
-s = "bilateral-serifed"
+s = "unilateral-serifed"
 t = "flat-hook-short-neck"
-u = "toothed-serifed"
+u = "toothed-motion-serifed"
 v = "straight-motion-serifed"
 w = "straight-motion-serifed"
 x = "straight-unilateral-motion-serifed"
 y = "straight-turn-motion-serifed"
 z = "curly-top-serifed"
+capital-eszet = "flat-top-serifed"
 eszet = "sulzbacher-dual-serifed-xh"
+lower-eth = "curly-bar"
 lower-alpha = "crossing"
 capital-gamma = "top-right-serifed"
 lower-delta = "flat-top"
+lower-iota = "semi-tailed"
+capital-lambda = "straight-top-serifed"
 lower-lambda = "straight-turn"
+lower-mu = "toothed-motion-serifed"
 lower-xi = "flat-top"
+lower-pi = "tailless"
+lower-chi = "semi-chancery-straight-serifless"
+lower-psi = "serifed"
 cyrl-a = "double-storey-toothless-rounded"
 cyrl-capital-zhe = "symmetric-connected"
 cyrl-zhe = "symmetric-connected"
 cyrl-capital-ze = "serifless"
 cyrl-ze = "serifless"
-cyrl-capital-ka = "symmetric-connected-serifless"
+cyrl-capital-ka = "symmetric-connected-bottom-right-serifed"
+cyrl-ka = "straight-bottom-right-serifed"
+cyrl-el = "straight"
+cyrl-em = "flat-bottom-motion-serifed"
+cyrl-capital-en = "top-left-serifed"
+cyrl-en = "top-left-serifed"
+cyrl-capital-er = "closed-motion-serifed"
+cyrl-er = "eared-motion-serifed"
+cyrl-capital-u = "straight-turn-motion-serifed"
 cyrl-ef = "serifless"
+cyrl-yeri = "round"
+cyrl-yery = "corner-tailed"
+cyrl-capital-e = "unilateral-inward-serifed"
+cyrl-e = "unilateral-inward-serifed"
+cyrl-capital-ya = "straight-motion-serifed"
+cyrl-ya = "straight-motion-serifed"
+tittle = "round"
 diacritic-dot = "square"
 punctuation-dot = "square"
+braille-dot = "round"
 tilde = "low"
 asterisk = "turn-hex-low"
 ascii-grave = "straight"
@@ -94,6 +118,8 @@ cent = "through"
 percent = "rings-continuous-slash"
 bar = "force-upright"
 question = "corner"
+pilcrow = "high"
+micro-sign = "tailed-motion-serifed"
 lig-ltgteq = "slanted"
 lig-neq = "more-slanted"
 lig-equal-chain = "without-notch"
@@ -102,5 +128,25 @@ lig-plus-chain = "without-notch"
 lig-double-arrow-bar = "without-notch"
 lig-single-arrow-bar = "without-notch"
 
-[buildPlans.IosevkaRn.ligations]
+[buildPlans.IosevkaRx.ligations]
 inherits = "dlig"
+
+[buildPlans.IosevkaRx.widths.Condensed]
+shape = 500
+menu = 3
+css = "condensed"
+
+[buildPlans.IosevkaRx.widths.Normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.IosevkaRx.widths.SemiExtended]
+shape = 658
+menu = 6
+css = "semi-expanded"
+
+[buildPlans.IosevkaRx.widths.Extended]
+shape = 720
+menu = 7
+css = "expanded"

@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository into `iosevka` sub directory
       - uses: actions/checkout@v4
 
       - name: Use Node.js
@@ -19,7 +18,7 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Install ttfautohint
+      - name: Install ttf-auto-hint
         shell: bash
         run: |
           sudo apt-get update
@@ -29,7 +28,7 @@ jobs:
         shell: bash
         run: |
           npm install
-          npm run build -- contents::IosevkaRn
+          npm run build -- contents::IosevkaRx
 
       - name: Archive
         uses: actions/upload-artifact@v4
