@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: |
           npm install
-          npm run build -- contents::IosevkaRx
+          npm run build -- ttf::IosevkaRo
 
       - name: Archive
         uses: actions/upload-artifact@v4
